@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="fi-FI">
+<head>
+	<meta charset="UTF-8">
+	<title>RPKK Lukkari</title>
+	<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="date.js"></script>
+	<script type="text/javascript" src="lukkariTaulukot.js"></script>
+	<script type="text/javascript" src="lukkari.js"></script>
+	<style type="text/css" media="screen">
+		#lukkarikoodit{
+			display: none;
+		}
+		#lukkarinimet{
+			width: 200px;
+		}
+		#ruokalista{
+			position: absolute;
+			right: 0%;
+			width: 350px;
+		}
+		div#sivu {
+		min-width: 1000px;
+	    width: 80%;
+	    margin-top: 50px;
+	    margin-bottom: 50px;
+	    margin-left: auto;
+	    margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="sivu">
+	<div id="napit">
+	<select id="jakso">
+		<option value="1" id="1">Jakso 1</option>
+		<option value="2" id="2">Jakso 2</option>
+		<option value="3" id="3">Jakso 3</option>
+		<option value="4" id="4">Jakso 4</option>
+		<option value="5" id="5">Jakso 5</option>
+		<option value="6" id="6">Jakso 6</option>
+	</select>
+	<p><button id="ok">Ok</button></p>
+	<button id="toggle">Koodit/Nimet</button>
+	</div>	
+	<div id="ruokalista"></div>
+	<div id="lukkarikoodit" class="lukkari"></div>
+	<div id="lukkarinimet" class="lukkari"></div>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+var koodit = new Array();
+koodit["YPA"] = "Äidinkieli"; koodit["YPB"] = "Ruotsi"; koodit["YPC"] = "Englanti"; koodit["YPD"] = "Matematiikka"; koodit["YPE"] = "Fysiikka ja kemia"; koodit["YPF"] = "Yhteiskunta-, yritys- ja työelämätieto"; koodit["YPG"] = "Terveystieto"; koodit["YPH"] = "Liikunta"; koodit["YPO"] = "Taide ja kulttuuri";
+koodit["YVA"] = "Äidinkieli";koodit["YVB"] = "Ruotsi";koodit["YVC"] = "Englanti";koodit["YVD"] = "Finanssimatematiikka";koodit["YVE"] = "Fysiikka ja kemia";koodit["YVF"] = "Yhteiskunta-, yritys- ja työelämätieto";koodit["YVH"] = "Liikunta";koodit["YVI"] = "Ympäristötieto"; koodit["YVJ"] = "Tieto- ja viestintätekniikka"; koodit["YVK"] = "Etiikka"; koodit["YVL"] = "Kulttuurin tuntemus"; koodit["YVM"] = "Psykologia"; koodit["YVN"] = "Yritystoiminta"; koodit["YVO"] = "Taide ja kulttuuri"; 
+koodit["DYA1"] = "Yrittäjyys"; koodit["DYA2"] = "Lainsäädäntö";
+koodit["DYA3A"] = "Myyntineuvottelut ja asiakaspalvelutilanteet"; koodit["DYA3B"] = "Liikeviestintä, englannin kieli"; koodit["DYA3C"] = "Liikeviestintä, ruotsin kieli"; koodit["DYA3D"] = "Asiakasviestintä, suomen kieli"; koodit["DYA3E"] = "Toimistopalvelut ja tiedostonhallinta"; koodit["DYA3F"] = "Yrityksen WWW-Sivut";
+koodit["DYA4A"] = "Taloushallinto ja laskentatoimi"; koodit["DYA4B"] = "Matematiikka";    
+koodit["DYA5"] = "Tietojärjestelmien suunnitelu ja projektityöskentely";
+koodit["DYA6A"] = "Ohjelmoinnin perusteet"; koodit["DYA6B"] = "Tietovarastojen suunnittelu";
+koodit["DYA7A"] = "Näppäilytaito"; koodit["DYA7B"] = "Tiedonhaku"; koodit["DYA7C"] = "Tekstinkäsittelyn perusteet"; koodit["DYA7D"] = "Taulukkolaskennan perusteet"; koodit["DYA7E"] = "Yhteiskäytön sekä makro-ohjelmoinnin perusteet";
+koodit["DYA8A"] = "Tietokonelaitteisto ja oheislaitteet"; koodit["DYA8B"] = "Varusohjelmien perushallinta";
+koodit["DYA9"] = "Tietoliikennetekniikka";
+koodit["DKT1A"] = "Tietotekniikkahankinnat"; koodit["DKT1B"] = "Hankinta-asiakirjat"; koodit["DKT1C"] = "Tekstinkäsittely"; koodit["DKT1D"] = "Taulukkolaskenta"; koodit["DKT1E"] = "Yhteiskäyttö"; koodit["DKT1F"] = "Makrot"; koodit["DKT1G"] = "WWW-Sivujen editorit";
+koodit["DKT2A"] = "Käytön tuki ja koulutus"; koodit["DKT2B"] = "Käyttöohjeet"; 
+koodit["DKT3A"] = "Laitetekniikka ja asentamiset"; koodit["DKT3B"] = "Laitteistojen ongelmatilanteet"; koodit["DKT3C"] = "Mikrotukityö"; koodit["DKT3D"] = "Computing English";
+koodit["DKT4A"] = "Työaseman hallinta"; koodit["DKT4B"] = "Palvelimen hallinta"; koodit["DKT4C"] = "Verkkolaitteet"; 
+koodit["DKT5A"] = "Yrityksen tietoturva"; koodit["DKT5B"] = "Tietoturvan lainsäädäntö";
+koodit["DKT6"] = "Datanomi yrittäjänä"; koodit["DKT7"] = "Opinnäytetyö ja tutkimuksellinen osaaminen";
+koodit["DVA1"] = "Oppimaan oppiminen"; koodit["DVA2"] = "Opinnäytetyön kirjoittaminen"; koodit["DVA3"] = "English in computing enviroment"; koodit["DVA4"] = "Työelämän pelisäännöt"; koodit["DVA7"] = "Työpaikkaohjaajaksi valmentautuminen"; koodit["DVA8"] = "Yrittäjyys ja liiketoiminta"; 
+koodit["DVV1"] = "Käyttöjärjestelmät"; koodit["DVV2"] = "Linux"; koodit["DVV3"] = "Matematiikka"; koodit["DVV4"] = "Verkkoviestintä"; koodit["DVV5"] = "Ohjelmointi"; 
+
+var jaksot = new Array();
+jaksot[1] = ["15.08.2011", "23.09.2011"];
+jaksot[2] = ["26.09.2011", "11.11.2011"];
+jaksot[3] = ["14.11.2011", "11.01.2012"];
+jaksot[4] = ["12.12.012", "22.02.2012"];
+jaksot[5] = ["23.02.2012", "13.04.2012"];
+jaksot[6] = ["16.04.2012 ", "01.06.2012"];
