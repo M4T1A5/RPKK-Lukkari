@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-	require "funktiot.inc";
+	require "../funktiot.inc";
 	$yhteys = AvaaTietokanta();
 	
 	$maanantai = "\n" . str_replace(";", "\n", $_POST['maanantai']);

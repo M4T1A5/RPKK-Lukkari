@@ -11,7 +11,7 @@
 </head>
 <body>
 <?php
-	require "funktiot.inc";
+	require "../funktiot.inc";
 
 	$yhteys = AvaaTietokanta();
 
