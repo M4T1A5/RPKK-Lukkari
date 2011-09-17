@@ -13,8 +13,8 @@ function haeJakso(x){
 	});
 	$("#lukkarikoodit").load(linkki + " .lukkari_table2");
 	}
-	catch(Err){
-		alert ("Lukkarin latauksessa tapahtui virhe " + Err);
+	catch(ಠ_ಠ){
+		alert ("Lukkarin latauksessa tapahtui virhe " + ಠ_ಠ);
 	}
 }
 
@@ -29,6 +29,7 @@ function korvaa() {
 	});
 }
 
+//muuta ruokalistan asemointia jos ikkuna liian pieni
 function ikkunankoko(){
 	if($(window).width() < 1000)
 	{
@@ -42,24 +43,29 @@ function ikkunankoko(){
 	}	
 }
 
+//Hakee nykyisen jakson päivämäärän perusteella
 function nykyinenJakso()
 {
 	var nyt = Date.today();
 	//var nyt = Date.parse(prompt("Anna testipäivämäärä")); //debug
+
 	for (var i = 1; i <= 6; i++) {
 		loppupvm_seuraava = Date.parse(jaksot[i+1][1]);
 		alkupvm = Date.parse(jaksot[i][0]);
 		loppupvm = Date.parse(jaksot[i][1]);
+
+		//tarkistaa onko nykyinen päivämäärä jonkun jakson sisällä ja palauttaa jakson
 		if(nyt >= alkupvm && nyt <= loppupvm)
 			return i;
+		//tarkista onko jakso mennyt ohi mutta uusi ei ole vielä alkanut(viikonloput jaksojen välissä)
+		//ja palautaa uuden jakson
 		else if(nyt < loppupvm_seuraava && nyt >= loppupvm)
 			return i+1;
 		
 	}
+	//palauttaa viimeisen jakson jos koulu loppunut
 	if(nyt > jaksot[6][1])
 		return 6;
-	else
-		return 1;
 }
 
 $(window).resize(function(){
@@ -70,11 +76,13 @@ $(document).ready(function(){
 
 	ikkunankoko();
 	
+	//hae oikea jakso ja muuta jaksolistan vakioarvo samaksi
 	haeJakso(nykyinenJakso());
 	$("#jakso").val(nykyinenJakso());
 
 	$("#ruokalista").load("ruokalistaa.php");
 	
+	//hakee valitun jakson nappia painettaessa
 	$("#ok").click(function(){
 		var jakso = $("#jakso").val();
 		haeJakso(jakso);
