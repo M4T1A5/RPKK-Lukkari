@@ -17,6 +17,7 @@
 	Keskiviikko: <input type="text" class="ruoka" name="keskiviikko" id="keskiviikko"><p>
 	Torstai: <input type="text" class="ruoka" name="torstai" id="torstai"><p>
 	Perjantai: <input type="text" class="ruoka" name="perjantai" id="perjantai"><p>
+	<p>Salasana: <input type="password" width="200px" name="salasana" id="salasana"></p>
 	<p><input type="submit" value="Tallenna"></p>
 </form>
 </body>
