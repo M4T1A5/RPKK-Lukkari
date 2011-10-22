@@ -1,19 +1,52 @@
+body{
+	background-color: #909090;
+}
+#header{
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-top: -1%;
+	background-color: #646464;
+	padding: 10px;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	min-width: 610px;
+}
+#sivu{
+	max-width: 1500px;
+	min-width: 610px;
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	background-color: #B1B1B1;
+	border-radius: 20px;
+}
+#ruokalista{
+	width: 350px;
+	padding: 0px 5px;
+	border: solid 1px;
+	margin-top: 10px;
+	text-align: center;
+}
+#napit{
+	margin-top: 10px;
+	margin-left: 250px;
+}
+#jakso{
+	width: 100px;
+}
+#ok{
+	margin-left: 30px;
+}
 #lukkarikoodit{
 	display: none;
 }
 #lukkarinimet{
 	width: 200px;
 }
-#ruokalista{
-	position: absolute;
-	right: 0%;
-	width: 350px;
-}
-div#sivu{
-	min-width: 1000px;
-	width: 80%;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-left: auto;
-	margin-right: auto;
+.lukkari{
+	margin-top: 10px;
+	margin-left: 1.5%;
 }

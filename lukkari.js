@@ -34,7 +34,8 @@ var opts = {
 function haeJakso(x){
 	alkupvm = jaksot[x][0].replace(/\./gi, "");
 	loppupvm = jaksot[x][1].replace(/\./gi, "");
-	var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
+	//var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
+	var linkki = "jakso2.html";
 
 	//yritä ladata lukkari sivulle
 	try {
@@ -61,15 +62,21 @@ function korvaa() {
 
 //muuta ruokalistan asemointia jos ikkuna liian pieni
 function ikkunankoko(){
-	if($(window).width() < 1000)
+	if($(window).width() < 1260)
 	{
 		$("#ruokalista").css("position", "relative");
 		$("#ruokalista").css("right", "auto");
+		$("#ruokalista").css("left", "1.5%");
+		$("#sivu").css("min-height", "1900px");
+		$("#ruokalista").remove().insertBefore($("#napit"));
 	}
 	else
 	{
 		$("#ruokalista").css("position", "absolute");
-		$("#ruokalista").css("right", "0%");
+		$("#ruokalista").css("right", "12%");
+		$("#ruokalista").css("left", "auto");
+		$("#sivu").css("min-height", "1310px");
+		$("#ruokalista").remove().insertAfter($("#napit"));
 	}	
 }
 
