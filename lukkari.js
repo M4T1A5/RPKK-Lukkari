@@ -35,7 +35,7 @@ function haeJakso(x){
 	alkupvm = jaksot[x][0].replace(/\./gi, "");
 	loppupvm = jaksot[x][1].replace(/\./gi, "");
 	var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
-
+	//var linkki = "jakso2.html";
 	//yritä ladata lukkari sivulle
 	try {
 	$("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
