@@ -43,8 +43,8 @@ function haeJakso(x){
 	});
 	$("#lukkarikoodit").load(linkki + " .lukkari_table2");
 	}
-	catch(ಠ_ಠ){
-		alert ("Lukkarin latauksessa tapahtui virhe " + ಠ_ಠ);
+	catch(err){
+		alert ("Lukkarin latauksessa tapahtui virhe " + err);
 	}
 }
 
@@ -110,11 +110,10 @@ $(window).resize(function(){
 
 $(document).ready(function(){
 
-	$("#loading")
-	.ajaxStart(function(){
+	$("#loading").ajaxStart(function(){
 		$(this).spin(opts);
-	})
-	.ajaxStop(function(){
+	});
+	$("#loading").ajaxStop(function(){
 		$(this).spin();
 	});
 
