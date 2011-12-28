@@ -1,17 +1,17 @@
 // jaksot-taulukko ja koodit-taulukko ladataan tiedostosta lukkariTaulukot.js
 
 //Spinneri plugin jQueryyn
-$.fn.spin = function(opts) {
+$.fn.spin = function(opts){
     this.each(function() {
         var $this = $(this),
         data = $this.data();
 
-        if (data.spinner) {
+        if (data.spinner){
             data.spinner.stop();
             delete data.spinner;
             return; //Muokattu funktiota jotta spinnerin saa pois päältä
         }
-        if (opts !== false) {
+        if (opts !== false){
             data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
         }
     });
@@ -37,7 +37,7 @@ function haeJakso(x){
     var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
     //var linkki = "jakso2.html";
     //yritä ladata lukkari sivulle
-    try {
+    try{
         $("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
             korvaa();
         });
@@ -49,7 +49,7 @@ function haeJakso(x){
 }
 
 // korvaa talukosta koodit nimillä
-function korvaa() {
+function korvaa(){
     $("#lukkarinimet td").each(function(){
         var text = $(this).html();
         for(i in koodit){
@@ -61,31 +61,28 @@ function korvaa() {
 
 //muuta ruokalistan asemointia jos ikkuna liian pieni
 function ikkunankoko(){
-    if($(window).width() < 1260)
-        {
-            $("#ruokalista").css("position", "relative");
-            $("#ruokalista").css("right", "auto");
-            $("#ruokalista").css("left", "1.5%");
-            $("#sivu").css("min-height", "1900px");
-            $("#ruokalista").remove().insertBefore($("#napit"));
-        }
-        else
-            {
-                $("#ruokalista").css("position", "absolute");
-                $("#ruokalista").css("right", "12%");
-                $("#ruokalista").css("left", "auto");
-                $("#sivu").css("min-height", "1310px");
-                $("#ruokalista").remove().insertAfter($("#napit"));
-            }
+    if($(window).width() < 1400){
+        $("#ruokalista").css("position", "relative");
+        $("#ruokalista").css("right", "auto");
+        $("#ruokalista").css("left", "1.5%");
+        $("#sivu").css("min-height", "1900px");
+        $("#ruokalista").remove().insertBefore($("#napit"));
+    }
+    else{
+        $("#ruokalista").css("position", "absolute");
+        $("#ruokalista").css("right", "12%");
+        $("#ruokalista").css("left", "auto");
+        $("#sivu").css("min-height", "1310px");
+        $("#ruokalista").remove().insertAfter($("#napit"));
+    }
 }
 
 //Hakee nykyisen jakson päivämäärän perusteella
-function nykyinenJakso()
-{
+function nykyinenJakso(){
     var nyt = Date.today();
     //var nyt = Date.parse(prompt("Anna testipäivämäärä")); //debug
 
-    for (var i = 1; i <= 6; i++) {
+    for (var i = 1; i <= 6; i++){
         loppupvm_seuraava = Date.parse(jaksot[i+1][1]);
         alkupvm = Date.parse(jaksot[i][0]);
         loppupvm = Date.parse(jaksot[i][1]);
@@ -97,7 +94,6 @@ function nykyinenJakso()
         //ja palautaa uuden jakson
         else if(nyt < loppupvm_seuraava && nyt >= loppupvm)
             return i+1;
-
     }
     //palauttaa viimeisen jakson jos koulu loppunut
     if(nyt > jaksot[6][1])
