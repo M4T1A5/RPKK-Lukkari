@@ -1,34 +1,62 @@
-<!DOCTYPE HTML>
-<html lang="fi-FI">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="HandheldFriendly" content="true" />
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
-        <title>RPKK Lukkari</title>
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="js/date.js"></script>
-        <script type="text/javascript" src="js/lukkaritaulukot.js"></script>
-        <script type="text/javascript" src="js/lukkari.js"></script>
-    </head>
-    <body>
-        <div id="header"><h1>Lukkarisivu</h1></div>
-        <div id="loading"></div>
-        <div id="sivu">
-            <div id="napit">
-                <select id="jakso">
-                    <option value="1" id="1">Jakso 1</option>
-                    <option value="2" id="2">Jakso 2</option>
-                    <option value="3" id="3">Jakso 3</option>
-                    <option value="4" id="4">Jakso 4</option>
-                    <option value="5" id="5">Jakso 5</option>
-                    <option value="6" id="6">Jakso 6</option>
-                </select>
-                <p><button id="ok">Ok</button></p>
-                <button id="toggle">Koodit/Nimet</button>
-            </div>
-            <div id="ruokalista"></div>
-            <div id="lukkarikoodit" class="lukkari"></div>
-            <div id="lukkarinimet" class="lukkari"></div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Lukkarisivu</a>
         </div>
-    </body>
+      </div>
+    </div>
+
+    <div class="container">
+        <div id="lukkarinimet"></div>
+        <div id="lukkarikoodit"></div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/lukkaritaulukot.js"></script>
+    <script src="js/lukkari.js"></script>
+
+  </body>
 </html>
