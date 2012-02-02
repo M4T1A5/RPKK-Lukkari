@@ -20,12 +20,15 @@
 
 	$ruoka = mysql_fetch_assoc($kysely);
 
-	print "<p><span class='paiva'>Maanantai</span>" . ":" . $ruoka["maanantai"] . "</p>";
-	print "<p><span class='paiva'>Tiistai</span>" . ":" . $ruoka["tiistai"] . "</p>";
-	print "<p><span class='paiva'>Keskiviikko</span>" . ":" . $ruoka["keskiviikko"] . "</p>";
-	print "<p><span class='paiva'>Torstai</span>" . ":" . $ruoka["torstai"] . "</p>";
-	print "<p><span class='paiva'>Perjantai</span>" . ":" . $ruoka["perjantai"] . "</p>";
-	print "<p><span class='paiva'>Päivitetty: </span>" . $ruoka["paivitetty"] . "</p>";
+	print "<table class='table'>";
+	print "<thead><th>Ruokalista</th></thead>";
+	print "<tr><td><span class='paiva'>Maanantai:</span>" . $ruoka["maanantai"] . "</td></tr>";
+	print "<tr><td><span class='paiva'>Tiistai:</span>" . $ruoka["tiistai"] . "</td></tr>";
+	print "<tr><td><span class='paiva'>Keskiviikko:</span>" . $ruoka["keskiviikko"] . "</td></tr>";
+	print "<tr><td><span class='paiva'>Torstai:</span>" . $ruoka["torstai"] . "</td></tr>";
+	print "<tr><td><span class='paiva'>Perjantai:</span>" . $ruoka["perjantai"] . "</td></tr>";
+	print "<tr><td><span class='paiva'>Päivitetty: </span>" . $ruoka["paivitetty"] . "</td></tr>";
+	print "</table>";
 
 	mysql_free_result($kysely);
 ?>
