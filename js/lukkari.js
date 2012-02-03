@@ -1,16 +1,25 @@
 // Jaksot-taulukko ja koodit-taulukko ladataan tiedostosta lukkariTaulukot.js
 
 // Rakentaa linkin josta lukkari löytyy
-function haeJakso(x){
-	alkupvm = jaksot[x][0].replace(/\./gi, "");
-	loppupvm = jaksot[x][1].replace(/\./gi, "");
-	var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
-	//var linkki = "jakso2.html";
+function haeJakso(){
+    x = nykyinenJakso();
+    if (x != 4)
+    {
+        alkupvm = jaksot[x][0].replace(/\./gi, "");
+        loppupvm = jaksot[x][1].replace(/\./gi, "");
+        var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
+        //var linkki = "jakso2.html";
 
-	$("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
-		korvaa();
-	});
-	$("#lukkarikoodit").load(linkki + " .lukkari_table2");
+        $("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
+            korvaa();
+        });
+        $("#lukkarikoodit").load(linkki + " .lukkari_table2");
+    }
+    else{
+        var linkki = "img/toissa.jpg"
+        $("#lukkarinimet").html("<img src='"+linkki+"'>");
+        $("#lukkarikoodit").html("<img src='"+linkki+"'>");
+    } 
 	$("#jaksoNumero").text("Jakso " + x);
 }
 
@@ -52,7 +61,7 @@ function korvaa(){
 $(document).ready(function(){
 
 	// Hae oikea jakso ja muuta jaksolistan vakioarvo samaksi
-	haeJakso(nykyinenJakso());
+	haeJakso();
 
 	$("#ruokalista").load("ruokalistaa.php");
 
