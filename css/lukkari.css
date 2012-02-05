@@ -1,3 +1,11 @@
 #lukkarikoodit{
     display: none;
 }
+@media (max-width: 1000px){
+	.pull-right{
+		float: none;
+	}
+	#ruokalista{
+		max-width: 180px;
+	}
+}

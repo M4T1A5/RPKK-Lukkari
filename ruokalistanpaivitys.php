@@ -17,9 +17,6 @@
 		body {
 			padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 		}
-		.ruoka{
-			width: 500px;
-		}
 	</style>
 </head>
 <body>
@@ -47,18 +44,52 @@
 </div>
 <div class="container">
 	<div class="row">
-		<p>Erota ruoat puolipisteellä (";")</p>
-		<p>
-		<form action="ruokalistatallenna.php" method="post">
-			Maanantai: <input type="text" class="ruoka" name="maanantai" id="maanantai"><p>
-			Tiistai: <input type="text" class="ruoka" name="tiistai" id="tiistai"><p>
-			Keskiviikko: <input type="text" class="ruoka" name="keskiviikko" id="keskiviikko"><p>
-			Torstai: <input type="text" class="ruoka" name="torstai" id="torstai"><p>
-			Perjantai: <input type="text" class="ruoka" name="perjantai" id="perjantai"><p>
-			<p>Salasana: <input type="password" width="200px" name="salasana" id="salasana"></p>
-			<p><input type="submit" value="Tallenna"></p>
+		<form  class="form-horizontal" action="ruokalistatallenna.php" method="post">
+			<fieldset>
+				<legend>Ruokalistan päivitys</legend>				
+				<div class="control-group">
+					<label class="control-label" for="maanantai">Maanantai</label>
+					<div class="controls">
+						<input type="text" class="span5" name="maanantai" id="maanantai">
+						<p class="help-block" >Erota ruoat puolipisteellä (";")</p>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="" for="tiistai">Tiistai</label>
+					<div class="controls">
+						<input type="text" class="span5" name="tiistai" id="tiistai">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="" for="keskiviikko">Keskiviikko</label>
+					<div class="controls">
+						<input type="text" class="span5" name="keskiviikko" id="keskiviikko">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="" for="torstai">Torstai</label>
+					<div class="controls">
+						<input type="text" class="span5" name="torstai" id="torstai">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="" for="perjantai">Perjantai</label>
+					<div class="controls">
+						<input type="text" class="span5" name="perjantai" id="perjantai">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="" for="salasana">Salasana</label>
+					<div class="controls">
+						<input type="password" class="span2" name="salasana" id="salasana">
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit"  class="btn btn-primary">Tallenna</button>
+					<button type="reset" class="btn">Peruuuta</button>
+				</div>
+			</fieldset>
 		</form>
-		</p>
 	</div>
 </div>
 </form>
