@@ -16,7 +16,7 @@ function haeJakso(){
         $("#lukkarikoodit").load(linkki + " .lukkari_table2");
     }
     else{
-        var linkki = "img/toissa.jpg"
+        var linkki = "img/toissa.jpg";
         $("#lukkarinimet").html("<img src='"+linkki+"'>");
         $("#lukkarikoodit").html("<img src='"+linkki+"'>");
     } 
