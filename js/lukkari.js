@@ -31,7 +31,7 @@ function nykyinenJakso(){
 	var nyt = Date.today();
 	//var nyt = Date.parse(prompt("Anna testipäivämäärä")); //debug
 
-	for (var i = 1; i <= 6; i++){
+	for (var i = 1; i <= 7; i++){
 		loppupvm_seuraava = Date.parse(jaksot[i+1][1]);
 		alkupvm = Date.parse(jaksot[i][0]);
 		loppupvm = Date.parse(jaksot[i][1]);
@@ -46,7 +46,7 @@ function nykyinenJakso(){
 			return i+1;
 	}
 	// Palauttaa viimeisen jakson jos koulu loppunut
-	if(nyt > jaksot[6][1])
+	if(nyt > jaksot[7][1])
 	return 6;
 }
 
