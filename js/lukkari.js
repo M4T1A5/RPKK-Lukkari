@@ -23,6 +23,11 @@ function haeJakso(){
         $("#lukkarinimet").html("<img src='"+linkki+"'>");
         $("#lukkarikoodit").html("<img src='"+linkki+"'>");
     }
+    if (x == 5)
+	$("#jaksoNumero").text("Jakso " + x + "a");
+	else if ( x == 6)
+	$("#jaksoNumero").text("Jakso " + x + "b");
+	else
 	$("#jaksoNumero").text("Jakso " + x);
 }
 
