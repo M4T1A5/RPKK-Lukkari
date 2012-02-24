@@ -1,13 +1,16 @@
 // Jaksot-taulukko ja koodit-taulukko ladataan tiedostosta lukkariTaulukot.js
 
+// Linkki jos lukkari ladataan
+var linkki = "";
+
 // Rakentaa linkin josta lukkari löytyy
 function haeJakso(){
     x = nykyinenJakso();
-    if (x != 4)
+    if (x != 4 && x != 5)
     {
         alkupvm = jaksot[x][0].replace(/\./gi, "");
         loppupvm = jaksot[x][1].replace(/\./gi, "");
-        var linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
+        linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
         //var linkki = "jakso2.html";
 
         $("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
@@ -16,10 +19,10 @@ function haeJakso(){
         $("#lukkarikoodit").load(linkki + " .lukkari_table2");
     }
     else{
-        var linkki = "img/toissa.jpg";
+        linkki = "img/toissa.jpg";
         $("#lukkarinimet").html("<img src='"+linkki+"'>");
         $("#lukkarikoodit").html("<img src='"+linkki+"'>");
-    } 
+    }
 	$("#jaksoNumero").text("Jakso " + x);
 }
 
