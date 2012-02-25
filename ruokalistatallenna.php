@@ -32,7 +32,7 @@
             <div class="nav-collapse">
                 <ul class="nav">
                     <li>
-                        <a href="lukkari.html">Lukkari</a>
+                        <a href="index.html">Lukkari</a>
                     </li>
                     <li>
                         <a href="ruokalistanpaivitys.php">Ruokalistan päivitys</a>
