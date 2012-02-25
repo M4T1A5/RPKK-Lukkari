@@ -4,7 +4,6 @@
 function haeJakso(){
 	var linkki = "";
     x = nykyinenJakso();
-    console.log(x);
     if (x != 4 && x != 5)
     {
         alkupvm = jaksot[x][0].replace(/\./gi, "");
