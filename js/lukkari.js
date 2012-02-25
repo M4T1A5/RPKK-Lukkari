@@ -11,8 +11,15 @@ function haeJakso(x){
 	{
 		alkupvm = jaksot[x][0].replace(/\./gi, "");
 		loppupvm = jaksot[x][1].replace(/\./gi, "");
+		if (x == 5)
+		linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso=5a&luokka=D3";
+		else if (x == 6)
+		linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso=5b&luokka=D3";
+		else if (x == 7)
+		linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso=6&luokka=D3";
+		else
 		linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
-		//var linkki = "jakso2.html";
+		//var linkki = "jakso2.html"; // debug
 
 		$("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
 			korvaa();
@@ -36,6 +43,8 @@ function nykyinenJakso(){
 		loppupvm_seuraava = Date.parse(jaksot[i+1][1]);
 		alkupvm = Date.parse(jaksot[i][0]);
 		loppupvm = Date.parse(jaksot[i][1]);
+
+		console.log(i);
 
 		// Tarkistaa onko nykyinen päivämäärä jonkun jakson sisällä ja palauttaa jakson
 		if(nyt >= alkupvm && nyt <= loppupvm)
