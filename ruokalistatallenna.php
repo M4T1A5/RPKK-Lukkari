@@ -44,7 +44,7 @@
 </div>
 <div class="container">
 <?php
-    require "../funktiot.inc";
+    require "../../funktiot.inc";
     $yhteys = AvaaTietokanta();
     if($_POST['salasana'] == $salasana)
     {
