@@ -1,10 +1,8 @@
 // Jaksot-taulukko ja koodit-taulukko ladataan tiedostosta lukkariTaulukot.js
 
-// Linkki jos lukkari ladataan
-var linkki = "";
-
 // Rakentaa linkin josta lukkari löytyy
 function haeJakso(){
+	var linkki = "";
     x = nykyinenJakso();
     if (x != 4 && x != 5)
     {
