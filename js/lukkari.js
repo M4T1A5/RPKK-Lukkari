@@ -1,27 +1,29 @@
 // Jaksot-taulukko ja koodit-taulukko ladataan tiedostosta lukkariTaulukot.js
 
 // Rakentaa linkin josta lukkari löytyy
-function haeJakso(){
+function haeJakso(x){
+	$("#lukkarinimet").html("");
+	$("#lukkarikoodit").html("");
 	var linkki = "";
-    x = nykyinenJakso();
-    if (x != 4 && x != 5)
-    {
-        alkupvm = jaksot[x][0].replace(/\./gi, "");
-        loppupvm = jaksot[x][1].replace(/\./gi, "");
-        linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
-        //var linkki = "jakso2.html";
+	if (typeof x == "undefined")
+		x = nykyinenJakso();
+	if (x != 4 && x != 5)
+	{
+		alkupvm = jaksot[x][0].replace(/\./gi, "");
+		loppupvm = jaksot[x][1].replace(/\./gi, "");
+		linkki = "http://www.rpkk.fi/lukkarit/lukkari_show.php?toiminto=luokka&jalku="+alkupvm+"&jloppu="+loppupvm+"&jjakso="+x+"&luokka=D3";
+		//var linkki = "jakso2.html";
 
-        $("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
-            korvaa();
-        });
-        $("#lukkarikoodit").load(linkki + " .lukkari_table2");
-        console.log("ARGH");
-    }
-    else{
-        linkki = "img/toissa.jpg";
-        $("#lukkarinimet").html("<img src='"+linkki+"'>");
-        $("#lukkarikoodit").html("<img src='"+linkki+"'>");
-    }
+		$("#lukkarinimet").load(linkki + " .lukkari_table2", function(){
+			korvaa();
+		});
+		$("#lukkarikoodit").load(linkki + " .lukkari_table2");
+	}
+	else{
+		linkki = "img/toissa.jpg";
+		$("#lukkarinimet").html("<img src='"+linkki+"'>");
+		$("#lukkarikoodit").html("<img src='"+linkki+"'>");
+	}
 	$("#jaksoNumero").text($("#"+x).text());
 }
 
@@ -36,16 +38,14 @@ function nykyinenJakso(){
 		loppupvm = Date.parse(jaksot[i][1]);
 
 		// Tarkistaa onko nykyinen päivämäärä jonkun jakson sisällä ja palauttaa jakson
-		if(nyt >= alkupvm && nyt <= loppupvm){
+		if(nyt >= alkupvm && nyt <= loppupvm)
 			return i;
-		}
 		// Tarkista onko jakso mennyt ohi mutta uusi ei ole vielä alkanut(viikonloput jaksojen välissä)
 		// Ja palautaa uuden jakson
 		else if(nyt < loppupvm_seuraava && nyt >= loppupvm)
 			return i+1;
 	}
 	// Palauttaa viimeisen jakson jos koulu loppunut
-	if(nyt > jaksot[7][1])
 	return 7;
 }
 
