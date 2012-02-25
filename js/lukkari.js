@@ -4,6 +4,7 @@
 function haeJakso(){
 	var linkki = "";
     x = nykyinenJakso();
+    console.log(x);
     if (x != 4 && x != 5)
     {
         alkupvm = jaksot[x][0].replace(/\./gi, "");
@@ -15,18 +16,14 @@ function haeJakso(){
             korvaa();
         });
         $("#lukkarikoodit").load(linkki + " .lukkari_table2");
+        console.log("ARGH");
     }
     else{
         linkki = "img/toissa.jpg";
         $("#lukkarinimet").html("<img src='"+linkki+"'>");
         $("#lukkarikoodit").html("<img src='"+linkki+"'>");
     }
-    if (x == 5)
-	$("#jaksoNumero").text("Jakso " + x + "a");
-	else if ( x == 6)
-	$("#jaksoNumero").text("Jakso " + x + "b");
-	else
-	$("#jaksoNumero").text("Jakso " + x);
+	$("#jaksoNumero").text($("#"+x).text());
 }
 
 // Hakee nykyisen jakson päivämäärän perusteella
@@ -50,7 +47,7 @@ function nykyinenJakso(){
 	}
 	// Palauttaa viimeisen jakson jos koulu loppunut
 	if(nyt > jaksot[7][1])
-	return 6;
+	return 7;
 }
 
 // Korvaa talukosta koodit nimillä
