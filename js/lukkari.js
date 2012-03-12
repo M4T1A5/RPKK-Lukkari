@@ -32,6 +32,7 @@ function haeJakso(x){
 		$("#lukkarikoodit").html("<img src='"+linkki+"'>");
 	}
 	$("#jaksoNumero").text($("#"+x).text());
+	$("#jaksoPvm").text(jaksot[x][0] + " - " + jaksot[x][1]);
 }
 
 // Hakee nykyisen jakson päivämäärän perusteella
